@@ -1,0 +1,17 @@
+inherit rubygem
+
+NAME="ruby-sass-listen"
+VERSION=4.0.0
+RELEASE=1
+CATEGORY="Ruby"
+SUMMARY="Ruby Sass listen backend"
+DESCRIPTION="This fork of guard/listen provides a stable API for users of the
+ruby Sass CLI."
+
+PATCH_URI="4.0.0-cygwin-deps.patch"
+
+ARCH=noarch
+
+PKG_NAMES="${NAME} ${NAME}-doc"
+ruby_sass_listen_CONTENTS="${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
+ruby_sass_listen_doc_CONTENTS=${RUBYGEM_DOCDIR#/}
